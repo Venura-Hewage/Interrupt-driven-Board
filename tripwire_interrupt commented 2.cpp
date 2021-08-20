@@ -41,19 +41,19 @@ if(ldr_value < 800 && currentMillis > interval)
  //The LED turns on as well as the buzzer if the ldr is below the threshold as well when the time passed between the loop starting is greater than the interval(500ms).
  digitalWrite(red_light_pin, HIGH);
  tone(buzzer,1000);
-  
-  
+
+
 }
 
-  
+
 }
 
 //The method is used for the interrupt. It is triggered when the button is pushed.
 void shutdown_lasertrip_alarm()
 {
-  Serial.println("Shud down laser trip alarm interrupt triggered");
-  //Turns off the LED light and buzzer 
+  Serial.println("Shut down laser trip alarm interrupt triggered");
+  //Turns off the LED light and buzzer
   digitalWrite(red_light_pin, LOW); 
-  noTone(buzzer); 
+  noTone(buzzer);
 
 }
